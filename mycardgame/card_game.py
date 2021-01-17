@@ -210,7 +210,7 @@ class Game:
       game_valid = True
       self.deck.shuffle_deck()
       for _ in range(self.__num_turns):
-        if len(self.deck) < 2:
+        if len(self.deck.deck) < 2:
           print("Not enough remaining cards to continue the game.")
           game_valid = False
           break
