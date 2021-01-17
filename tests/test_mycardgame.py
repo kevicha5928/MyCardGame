@@ -1,9 +1,12 @@
 """Testing suite for card_game.
 
-Leave one blank line.  The rest of this docstring should contain an
-overall description of the module or program.  Optionally, it may also
-contain a brief description of exported classes and functions and/or usage
-examples.
+tests:
+1) new deck test
+2) add player test
+3) winner test
+4) sort cards test
+5) shuffle deck
+6) draw cards test
 
   Typical usage example:
 
@@ -30,11 +33,9 @@ def new_deck():
   return deck
 
 
-def test_new_deck():
+def test_new_deck(game):
   """creates a fresh deck"""
-  some_deck = card_game.Deck()
-  print(some_deck.deck)
-  assert some_deck.deck == new_deck()
+  assert game.deck.deck == new_deck()
 
 
 # Player add test. Only two players allowed

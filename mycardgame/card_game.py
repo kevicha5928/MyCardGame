@@ -200,18 +200,25 @@ class Game:
     print("Its a tie!")
     return winner
 
-  def run_game(self) -> None:
+  def run_game(self):
     """run current game"""
     if len(self.players) <= 1:
       print("Not Enough Players.")
+      return None
 
     else:
+      game_valid = True
       self.deck.shuffle_deck()
       for _ in range(self.__num_turns):
+        if len(self.deck) < 2:
+          print("Not enough remaining cards to continue the game.")
+          game_valid = False
+          break
         for player in self.players:
           card = self.deck.get_top_card()
           player.add_card(card)
           print(
               f"Player {player.name} draws the " +
               f"{self.__rank_ref[card[1]]} of {self.__suit_ref[card[0]]}")
-      self.determine_winner()
+      if game_valid:
+        return self.determine_winner()

@@ -3,9 +3,12 @@
 This project uses poetry as a package/virtual env managers
 https://python-poetry.org/
 
+need python 3.8 and above
+
 install poetry then run the following in the command line
 
 poetry install
+
 poetry shell
 
 Assumptions:
@@ -25,3 +28,4 @@ Assumptions:
    Ace = 14
 3. players will not remove cards from their hands
 4. if two players get the same score, its a tie
+5. if a new game is started from an existing game instance. players will discard their previous hand
