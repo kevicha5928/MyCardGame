@@ -30,7 +30,7 @@ class Player:
 
   def __init__(self, name: str):
     self.name = name
-    self.player_id = uuid4()
+    self.uuid = uuid4()
     self.__hand = []
     self.score = 0
 

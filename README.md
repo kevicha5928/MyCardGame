@@ -2,7 +2,9 @@
 
 This project uses poetry as a package/virtual env managers
 https://python-poetry.org/
-install poetry then run teh following in the command line
+
+install poetry then run the following in the command line
+
 poetry install
 poetry shell
 

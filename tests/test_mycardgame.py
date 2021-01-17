@@ -64,7 +64,7 @@ def test_who_wins(game, hand1, hand2, winner):
     game.players[0].add_card(hand1[i])
     game.players[1].add_card(hand2[i])
   if 1 <= winner <= 2:
-    assert game.determine_winner().name == game.players[winner-1].name
+    assert game.determine_winner()[0].uuid == game.players[winner-1].uuid
   else:
     assert len(game.determine_winner()) == 2
 
